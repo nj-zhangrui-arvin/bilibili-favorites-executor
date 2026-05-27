@@ -52,7 +52,12 @@ def test_docs_disclaimers_and_language_entrypoints():
     assert "bilibili_favorites_executor.min.user.js" not in readme
     assert "[中文](README.md)" in readme_en
     assert "非官方" in readme
+    assert "仅用于管理使用者本人账号下的收藏夹" in readme
+    assert "不应用于第三方账号、批量采集、商业数据抓取" in readme
+    assert "未获得 Bilibili 背书、赞助或授权" in readme
     assert "不会上传 Cookie、SESSDATA、csrf" in readme
+    assert "does not ask users to enter Cookie, SESSDATA, csrf tokens, or account passwords" in readme_en
+    assert "not affiliated with, endorsed by, sponsored by, or authorized by Bilibili" in readme_en
     assert "任务包只服务“视频收藏分类迁移”" in readme
     for asset_name in [
         "executor-overview.png",

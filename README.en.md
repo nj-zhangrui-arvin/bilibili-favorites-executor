@@ -71,6 +71,15 @@ These tools are independent from the task package. See [Cleanup Tools](docs/clea
 
 ## Disclaimer
 
+## Legal and Platform Boundary
+
+- This project is only intended for managing favorite folders under the user's own account. It must not be used for third-party accounts, bulk data collection, commercial scraping, engagement manipulation, bypassing platform restrictions, or disrupting platform services.
+- This project is not an official Bilibili API, official client, or official partner project. It is not affiliated with, endorsed by, sponsored by, or authorized by Bilibili.
+- The script does not ask users to enter Cookie, SESSDATA, csrf tokens, or account passwords. Browser requests are only made inside an already logged-in Bilibili page context.
+- Follow Bilibili's user agreement, community rules, and applicable laws. Automated operations may trigger platform risk controls; use only after understanding and accepting those risks.
+
+## Disclaimer
+
 This is an unofficial local browser tool and is not affiliated with Bilibili. It does not upload Cookie, SESSDATA, csrf tokens, favorite lists, or task packages to third-party servers. Bulk operations may still trigger Bilibili risk controls. Back up before running, and use at your own risk.
 
 ## Development Check
