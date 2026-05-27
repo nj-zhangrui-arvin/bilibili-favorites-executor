@@ -26,6 +26,8 @@ Bilibili Favorites Executor 是一个独立的 Tampermonkey/userscript 执行器
 
 任务包只服务“视频收藏分类迁移”。清理失效视频、删除收藏夹是页面小工具，不依赖任务包。
 
+更多项目拆分和后续计划见 [项目路线图](docs/project-roadmap.md)。继续开发可从 [下个会话交接](docs/next-session-handoff.md) 开始。
+
 ## 安装
 
 1. 安装 Tampermonkey。

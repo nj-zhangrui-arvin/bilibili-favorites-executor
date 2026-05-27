@@ -59,6 +59,15 @@ def test_docs_disclaimers_and_language_entrypoints():
     assert "does not ask users to enter Cookie, SESSDATA, csrf tokens, or account passwords" in readme_en
     assert "not affiliated with, endorsed by, sponsored by, or authorized by Bilibili" in readme_en
     assert "任务包只服务“视频收藏分类迁移”" in readme
+    assert "docs/project-roadmap.md" in readme
+    assert "docs/next-session-handoff.md" in readme
+    assert (ROOT / "docs" / "project-roadmap.md").exists()
+    assert (ROOT / "docs" / "next-session-handoff.md").exists()
+    roadmap = read(ROOT / "docs" / "project-roadmap.md")
+    handoff = read(ROOT / "docs" / "next-session-handoff.md")
+    assert "生成、执行、知识采集分离" in roadmap
+    assert "Plan Generator Skill" in handoff
+    assert "Knowledge Collector" in handoff
     for asset_name in [
         "executor-overview.png",
         "executor-panel-status.png",

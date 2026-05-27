@@ -26,6 +26,8 @@ Design note: the cover is generated and curated under the NooAI visual system. I
 
 The task package is only for video favorite migration. Cleanup tools are independent page utilities and do not require a task package.
 
+See [Project Roadmap](docs/project-roadmap.md) for the component split and future plan. Future work can start from [Next Session Handoff](docs/next-session-handoff.md).
+
 ## Install
 
 1. Install Tampermonkey.
