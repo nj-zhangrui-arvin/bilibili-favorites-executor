@@ -54,6 +54,14 @@ def test_docs_disclaimers_and_language_entrypoints():
     assert "非官方" in readme
     assert "不会上传 Cookie、SESSDATA、csrf" in readme
     assert "任务包只服务“视频收藏分类迁移”" in readme
+    for asset_name in [
+        "executor-overview.png",
+        "executor-panel-status.png",
+        "executor-maintenance-tools.png",
+    ]:
+        assert f"docs/assets/{asset_name}" in readme
+        assert f"docs/assets/{asset_name}" in readme_en
+        assert (ROOT / "docs" / "assets" / asset_name).exists()
 
 
 if __name__ == "__main__":

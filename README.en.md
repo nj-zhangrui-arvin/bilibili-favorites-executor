@@ -6,6 +6,14 @@ Bilibili Favorites Executor is a standalone Tampermonkey/userscript executor. It
 
 This repository only ships the **Executor**. It does not classify videos with AI and does not archive video content into a knowledge base.
 
+## Screenshots
+
+![Executor overview](docs/assets/executor-overview.png)
+
+![Task status panel](docs/assets/executor-panel-status.png)
+
+![Maintenance tools and logs](docs/assets/executor-maintenance-tools.png)
+
 ## Component Boundary
 
 - **Plan Generator**: reads favorite folders and video metadata, then produces a reviewed task package. Not included here.

@@ -6,6 +6,14 @@ Bilibili Favorites Executor 是一个独立的 Tampermonkey/userscript 执行器
 
 本仓库只做 **Executor**。它不负责 AI 分类，也不采集视频内容到知识库。
 
+## 效果图
+
+![执行器总览](docs/assets/executor-overview.png)
+
+![任务状态面板](docs/assets/executor-panel-status.png)
+
+![维护工具和日志](docs/assets/executor-maintenance-tools.png)
+
 ## 组件边界
 
 - **Plan Generator**：读取收藏夹和视频元数据，调用 AI 或规则生成任务包。本仓库不实现。
