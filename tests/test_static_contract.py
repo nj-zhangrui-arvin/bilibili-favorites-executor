@@ -5,6 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = ROOT / "bilibili_favorites_executor.user.js"
+MIN_SCRIPT = ROOT / "bilibili_favorites_executor.min.user.js"
 
 
 def read(path: Path) -> str:
@@ -13,12 +14,15 @@ def read(path: Path) -> str:
 
 def test_userscript_contract():
     script = read(SCRIPT)
+    min_script = read(MIN_SCRIPT)
     assert "// @version      0.6.0" in script
+    assert "// @version      0.6.0" in min_script
     assert 'const SCRIPT_VERSION = "0.6.0"' in script
     assert 'const LANG_KEY = "biliOrganizerExecutor.lang"' in script
     assert "function toggleLanguage()" in script
     assert 'resourceClean: "https://api.bilibili.com/x/v3/fav/resource/clean"' in script
     assert 'folderDel: "https://api.bilibili.com/x/v3/fav/folder/del"' in script
+    assert len(min_script.encode("utf-8")) < len(script.encode("utf-8"))
 
 
 def test_cleanup_independent_from_task_package():
@@ -48,6 +52,7 @@ def test_docs_disclaimers_and_language_entrypoints():
     readme = read(ROOT / "README.md")
     readme_en = read(ROOT / "README.en.md")
     assert "[English](README.en.md)" in readme
+    assert "bilibili_favorites_executor.min.user.js" in readme
     assert "[中文](README.md)" in readme_en
     assert "非官方" in readme
     assert "不会上传 Cookie、SESSDATA、csrf" in readme

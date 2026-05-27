@@ -17,10 +17,17 @@ The task package is only for video favorite migration. Cleanup tools are indepen
 ## Install
 
 1. Install Tampermonkey.
-2. Open `bilibili_favorites_executor.user.js`.
-3. Install the script into Tampermonkey.
-4. Open your Bilibili favorites page: `https://space.bilibili.com/.../favlist`.
-5. The executor panel appears in the bottom-right corner.
+2. Use the compressed install file: `bilibili_favorites_executor.min.user.js`.
+3. Install the compressed script into Tampermonkey.
+4. Use `bilibili_favorites_executor.user.js` for human review and debugging.
+5. Open your Bilibili favorites page: `https://space.bilibili.com/.../favlist`.
+6. The executor panel appears in the bottom-right corner.
+
+## Files
+
+- `bilibili_favorites_executor.min.user.js`: compressed install build for Tampermonkey.
+- `bilibili_favorites_executor.user.js`: readable source for review and debugging.
+- `scripts/build-minified-userscript.mjs`: builds the compressed install file from the readable source. It prefers temporary `terser` and falls back to a local conservative minifier.
 
 ## Quick Start
 
@@ -61,6 +68,8 @@ This is an unofficial local browser tool and is not affiliated with Bilibili. It
 
 ```bash
 node --check bilibili_favorites_executor.user.js
+node --check bilibili_favorites_executor.min.user.js
+node scripts/build-minified-userscript.mjs
 python3 tests/test_static_contract.py
 ```
 

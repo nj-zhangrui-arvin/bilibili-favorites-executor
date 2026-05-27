@@ -17,10 +17,17 @@ Bilibili Favorites Executor 是一个独立的 Tampermonkey/userscript 执行器
 ## 安装
 
 1. 安装 Tampermonkey。
-2. 打开 `bilibili_favorites_executor.user.js`。
-3. 将脚本内容安装到 Tampermonkey。
-4. 打开 Bilibili 个人空间的收藏夹页面：`https://space.bilibili.com/.../favlist`。
-5. 页面右下角会出现执行器面板。
+2. 安装用压缩版：打开 `bilibili_favorites_executor.min.user.js`。
+3. 将压缩版脚本内容安装到 Tampermonkey。
+4. 人工审查用可读版：`bilibili_favorites_executor.user.js`。
+5. 打开 Bilibili 个人空间的收藏夹页面：`https://space.bilibili.com/.../favlist`。
+6. 页面右下角会出现执行器面板。
+
+## 文件选择
+
+- `bilibili_favorites_executor.min.user.js`：压缩安装版，适合复制到 Tampermonkey。
+- `bilibili_favorites_executor.user.js`：人工查看版，适合审查代码和调试。
+- `scripts/build-minified-userscript.mjs`：从人工查看版生成压缩安装版；会优先使用临时 `terser`，失败时退回本地保守压缩。
 
 ## 快速开始
 
@@ -76,6 +83,8 @@ Bilibili Favorites Executor 是一个独立的 Tampermonkey/userscript 执行器
 
 ```bash
 node --check bilibili_favorites_executor.user.js
+node --check bilibili_favorites_executor.min.user.js
+node scripts/build-minified-userscript.mjs
 python3 tests/test_static_contract.py
 ```
 
