@@ -2,9 +2,13 @@
 
 [中文](README.md)
 
+![Bilibili Favorites Executor project cover](docs/assets/project-cover.png)
+
 Bilibili Favorites Executor is a standalone Tampermonkey/userscript executor. It runs on your logged-in Bilibili favorites page and executes a reviewed task package with conservative pacing, local state backup, pause/recovery, and report export.
 
 This repository only ships the **Executor**. It does not classify videos with AI and does not archive video content into a knowledge base.
+
+Design note: the cover is generated and curated under the NooAI visual system. It represents local execution, human review, pause/recovery, backup, and report export as the core project boundary.
 
 ## Screenshots
 
