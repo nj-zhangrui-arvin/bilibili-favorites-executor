@@ -2,9 +2,13 @@
 
 [English](README.en.md)
 
+![Bilibili Favorites Executor 项目封面](docs/assets/project-cover.png)
+
 Bilibili Favorites Executor 是一个独立的 Tampermonkey/userscript 执行器。它在你已登录的 Bilibili 收藏夹页面内运行，导入已审核的任务包后，按保守节奏执行收藏夹迁移、复制、目标夹创建、暂停恢复、备份和报告导出。
 
 本仓库只做 **Executor**。它不负责 AI 分类，也不采集视频内容到知识库。
+
+设计说明：封面由 NooAI 视觉体系生成并整理，表达本地执行、人工审核、暂停恢复、备份和报告导出的核心边界。
 
 ## 效果图
 
