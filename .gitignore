@@ -1,0 +1,8 @@
+.DS_Store
+*.log
+*.tmp
+bili-state-*.json
+bili-report-*.md
+tampermonkey-tasks.json
+artifacts/
+downloads/

@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "plan_name": "demo-migration-plan",
+  "target_folders": [
+    {
+      "folder_name": "编程/开发",
+      "folder_id": "2000000001"
+    },
+    {
+      "folder_name": "AI/学习",
+      "folder_id": "2000000002"
+    },
+    {
+      "folder_name": "工具/工作流",
+      "folder_id": ""
+    }
+  ],
+  "tasks": [
+    {
+      "operation_id": "op-00001",
+      "action": "move",
+      "bvid": "BV1example01",
+      "aid": "100000001",
+      "title": "示例：把视频从默认收藏夹迁移到编程/开发",
+      "source_folder": "默认收藏夹",
+      "source_folder_id": "1000000001",
+      "target_folder": "编程/开发",
+      "status": "pending"
+    },
+    {
+      "operation_id": "op-00002",
+      "action": "copy",
+      "bvid": "BV1example02",
+      "aid": "100000002",
+      "title": "示例：复制到 AI/学习，保留来源夹",
+      "source_folder": "默认收藏夹",
+      "source_folder_id": "1000000001",
+      "target_folder": "AI/学习",
+      "status": "pending"
+    }
+  ],
+  "stats": {
+    "total_tasks": 2,
+    "move_tasks": 1,
+    "copy_tasks": 1
+  }
+}
